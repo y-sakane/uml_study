@@ -63,7 +63,7 @@ class クラス名 <<ステレオタイプ（省略可能）>> {
 
 - ステレオタイプ
   - クラスの種別
-    - ex. <<interface>>
+    - ex. `<<interface>>`
   - 表現する場合、クラス名の上部に記述する
 
 ---
@@ -73,10 +73,10 @@ class クラス名 <<ステレオタイプ（省略可能）>> {
 ※名前以外は省略可能
 
 - 可視性
-  - + public
-  - - private
-  - # protected
-  - ~ package
+  - +public
+  - -private
+  - #protected
+  - ~package
 
 ```uml
 @startuml
@@ -96,8 +96,8 @@ class クラス名 {
 ※名前以外は省略可能
 
 - 可視性
-  - 属性と同じ
-  
+  - 属性と同じ
+
 ```uml
 @startuml
 class クラス名 {
@@ -111,12 +111,13 @@ class クラス名 {
 
 ### 相互関係
 - 線形
-  - 継承（汎化）
-  - 集約
+  - 継承（汎化）
+  - 集約
   - 関連
-  - 依存
-  - その他（コンポジション、実現）
+  - 依存
+  - その他（コンポジション、実現）
 - 多重度
+
 --- 
 
 ### 継承（汎化）
@@ -175,7 +176,7 @@ Car - Maintenance
 class Car
 class Driver
 
-Car <- Driver
+Car <.. Driver
 @enduml
 ```
 
@@ -207,7 +208,7 @@ Drive <|. Car
 - 機能ごとに相互作用（Interaction）と呼ばれるフレーム内に処理内容を記述する
 
 - Tips |
-  - 誰が 何を どうするか の手順書
+  - 誰が 何を どうするか の手順書
   - 全体や一部の流れを確認する
 
 ---
@@ -238,7 +239,7 @@ MngServer -> Switch : Login（同期）
 MngServer <-- Switch : （同期）
 
 
-MngServer <<- Switch : SNMP Trap
+MngServer <<- Switch : SNMPTrap
 MngServer -> MngServer : Handle
 MngServer -> Switch : CLI
 @enduml
@@ -249,7 +250,7 @@ MngServer -> Switch : CLI
 ### シーケンスの制御構造
 - 複合フラグメント
   - alt
-    - 分岐処理
+    - 分岐処理
     - if ~ else ~
   - opt
     - 条件を満たした時に実行される処理
